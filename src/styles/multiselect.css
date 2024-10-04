@@ -1,0 +1,57 @@
+
+.states-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.states-item {
+  display: inline-block;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.states-item:hover {
+  background-color: #eaeaea;
+}
+
+.states-item .close-btn {
+  color: red;
+  margin-left: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+.dropdown-options {
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 0;
+}
+
+
+.dropdown-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+
+.dropdown-item:hover {
+  background-color: #e6f2ff;
+}
+
+
+.dropdown-item.selected {
+  background-color: #cce5ff;
+}
