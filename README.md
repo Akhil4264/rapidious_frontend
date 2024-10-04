@@ -35,6 +35,7 @@ Follow these steps to get your development environment set up:
 
     Before starting the frontend server, make sure your backend server is running. Navigate to your backend directory and start the server:
 
+    Link to backend repository : https://github.com/Akhil4264/rapidious_backend
 
     Ensure the backend server is running correctly and listening for connections.
 
@@ -48,7 +49,7 @@ Follow these steps to get your development environment set up:
 
 ## Usage
 
-    After starting the server, you can access the application by navigating to `http://localhost` in your web browser.
+    After starting the server, you can access the application by navigating to `http://localhost:3000` in your web browser.
 
 
 
