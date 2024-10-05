@@ -10,7 +10,7 @@ const RecipeModal = ({ recipe, onClose }) => {
         <button className="close-button" onClick={onClose}>X</button>
         <h2>{recipe._source.title}</h2>
 
-        {recipe._source.desc && recipe._source.desc !="" && (
+        {recipe._source.desc && recipe._source.desc !=="" && (
           <p><strong>Description:</strong> {recipe._source.desc}</p>
         )}
         {recipe._source.directions && (

@@ -16,7 +16,7 @@ const App = () => {
   const [sortOrder, setSortOrder] = useState('asc');
   const [allOptions, setAllOptions] = useState([]);
   const [filtredOptions, setFiltredOptions] = useState([]);
-  const initialRange = { min: 0, max: 30111218 };
+  const initialRange = { min: 0, max: 99999999 };
   const [fatRange, setFatRange] = useState(initialRange);
   const [sodiumRange, setSodiumRange] = useState(initialRange);
   const [caloriesRange, setCaloriesRange] = useState(initialRange);
@@ -65,7 +65,7 @@ const App = () => {
 
   const handleRangeChange = (nutrient, value, type) => {
     const newRange = { ...nutrient };
-    newRange[type] = Math.min(Math.max(value, 0), 30111218);
+    newRange[type] = Math.min(Math.max(value, 0), 99999999);
     if (newRange.min <= newRange.max) {
       switch (nutrient) {
         case fatRange:
@@ -189,7 +189,7 @@ const App = () => {
 
   useEffect(() => {
     if (!isResetting && !isLoading) {
-      getRecipies(pageNo)
+      getRecipies(1)
     }
   }, [rating, fatRange, sodiumRange, caloriesRange, proteinRange, sortBy, sortOrder, states_val, minMaxEnabled]);
 
@@ -294,7 +294,7 @@ const App = () => {
                       value={nutrient.range.min}
                       onChange={(e) => handleRangeChange(nutrient.range, +e.target.value, 'min')}
                       min={0}
-                      max={30111218}
+                      max={99999999}
                     />
                     <input
                       type="number"
@@ -303,7 +303,7 @@ const App = () => {
                       value={nutrient.range.max}
                       onChange={(e) => handleRangeChange(nutrient.range, +e.target.value, 'max')}
                       min={0}
-                      max={30111218}
+                      max={99999999}
                     />
                   </div>
                 </div>
@@ -356,6 +356,7 @@ const App = () => {
                               setPageNo(1);
                               getRecipies(1);
                             }}
+                            style = {{zIndex : "0"}}
                           >
                             1
                           </button>
@@ -376,6 +377,7 @@ const App = () => {
                                     setPageNo(page);
                                     getRecipies(page);
                                   }}
+                                  style = {{zIndex : "0"}}
                                 >
                                   {page}
                                 </button>
@@ -397,6 +399,7 @@ const App = () => {
                                 setPageNo(pagesCount);
                                 getRecipies(pagesCount);
                               }}
+                              style = {{zIndex : "0"}}
                             >
                               {pagesCount}
                             </button>
